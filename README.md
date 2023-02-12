@@ -1,10 +1,10 @@
 ## Universal Render Pipeline UI Blur Renderer Extension (with rendering SpriteRenderer on top of UI Blur)
-![Preview of the effect](CatsExample.png)
+![Main cats example](CatsExample.png)
 
 Fork from [ArneBezuijen](https://github.com/ArneBezuijen)'s UI Blur implementation. Which is work fine with canvas Render Mode setted as "Screen Space - Overlay". 
 But thats mean we cant render Sprites on top. Changing Render Mode to "Screen Space - Camera" will render this:
 
-![Preview of the effect](BlurWithCameraScreenSpace.png)
+![Brocken render](BlurWithCameraScreenSpace.png)
 
 Basically all i done to fix this is just added two new layers "BlurLayer" (for canvas) and "DrawOnTop" (for drawing on top of Blur) and rendering that layers in separate RenderPasses (check ForwardRenderer asset).
 
